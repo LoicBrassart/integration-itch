@@ -3,7 +3,7 @@ import Button from "@components/Button";
 import { useState } from "react";
 import SMenu from "./style";
 
-export default function Menu({ buttons }) {
+export default function RadialMenu({ buttons }) {
   const [open, setOpen] = useState(false);
   const toggle = () => {
     setOpen(!open);
@@ -24,6 +24,6 @@ export default function Menu({ buttons }) {
     </SMenu>
   );
 }
-Menu.propTypes = {
+RadialMenu.propTypes = {
   buttons: propTypes.arrayOf(propTypes.shape()).isRequired,
 };

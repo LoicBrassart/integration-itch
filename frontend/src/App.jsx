@@ -2,7 +2,7 @@ import philo from "@assets/philo.svg";
 import coin from "@assets/coinflip.svg";
 import hyena from "@assets/hyena-head.svg";
 import piano from "@assets/pianist.svg";
-import Menu from "@components/Menu";
+import RadialMenu from "@components/RadialMenu";
 
 const buttons = [
   {
@@ -40,7 +40,7 @@ const buttons = [
 ];
 
 function App() {
-  return <Menu buttons={buttons} />;
+  return <RadialMenu buttons={buttons} />;
 }
 
 export default App;
