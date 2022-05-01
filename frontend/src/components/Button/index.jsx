@@ -1,5 +1,5 @@
 import propTypes from "prop-types";
-import burger from "@assets/hamburger-menu.svg";
+import burger from "@assets/icons/hamburger-menu.svg";
 import SButton from "./style";
 
 export default function Button({ data: { icon, text, cback } }) {

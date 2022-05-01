@@ -1,8 +1,10 @@
-import philo from "@assets/philo.svg";
-import coin from "@assets/coinflip.svg";
-import hyena from "@assets/hyena-head.svg";
-import piano from "@assets/pianist.svg";
+import philo from "@assets/icons/philo.svg";
+import coin from "@assets/icons/coinflip.svg";
+import hyena from "@assets/icons/hyena-head.svg";
+import piano from "@assets/icons/pianist.svg";
 import RadialMenu from "@components/RadialMenu";
+import Explanations from "@components/Explanations";
+import SApp from "./style";
 
 const buttons = [
   {
@@ -40,7 +42,51 @@ const buttons = [
 ];
 
 function App() {
-  return <RadialMenu buttons={buttons} />;
+  return (
+    <SApp>
+      <article>
+        <RadialMenu buttons={buttons} />
+        <Explanations>
+          <h2>Menu Radial</h2>
+          <h3>Problematique</h3>
+          <p>
+            Proposer un menu qui ne ressemble pas à un menu burger classique.{" "}
+          </p>
+          Ex de props:
+          <pre>
+            <code>
+              {`button={[
+{
+  id: 1,
+  icon: philo,
+  text: "Jack",
+  cback: () => {
+    console.warn("Jack");
+  },
+},
+{
+  id: 2,
+  icon: coin,
+  text: "Torment",
+  cback: () => {
+    console.warn("Torment");
+  },
+}]}`}
+            </code>
+          </pre>
+          Configurable:
+          <ul>
+            <li>Angle de départ et arc de répartition des contenus</li>
+          </ul>
+          Todo:
+          <ul>
+            <li>Resize icone burger</li>
+          </ul>
+        </Explanations>
+      </article>
+      <article>Toto</article>
+    </SApp>
+  );
 }
 
 export default App;
