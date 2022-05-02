@@ -48,10 +48,12 @@ function App() {
         <RadialMenu buttons={buttons} />
         <Explanations>
           <h2>Menu Radial</h2>
-          <h3>Problematique</h3>
-          <p>
-            Proposer un menu qui ne ressemble pas à un menu burger classique.{" "}
-          </p>
+          <h3>Problematiques</h3>
+          <ul>
+            <li>
+              Proposer un menu qui ne ressemble pas à un menu burger classique.
+            </li>
+          </ul>
           Ex de props:
           <pre>
             <code>
