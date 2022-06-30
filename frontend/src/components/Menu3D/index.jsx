@@ -1,3 +1,4 @@
+import Icon from "@components/Icon";
 import propTypes from "prop-types";
 import SMenu3D from "./style";
 
@@ -8,6 +9,7 @@ export default function Menu3D({ buttons }) {
         return (
           <li key={item.id} style={{ "--zIndex": buttons.length - i }}>
             {item.text}
+            <Icon name={item.icon} />
           </li>
         );
       })}

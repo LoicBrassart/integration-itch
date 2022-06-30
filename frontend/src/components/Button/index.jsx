@@ -1,11 +1,11 @@
 import propTypes from "prop-types";
-import burger from "@assets/icons/hamburger-menu.svg";
+import Icon from "@components/Icon";
 import SButton from "./style";
 
 export default function Button({ data: { icon, text, cback } }) {
   return (
     <SButton onClick={cback || null}>
-      <img src={icon || burger} alt={text} />
+      <Icon name={icon} />
       <p>{text}</p>
     </SButton>
   );

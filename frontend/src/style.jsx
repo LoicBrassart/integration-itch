@@ -2,7 +2,6 @@ import styled from "styled-components";
 import bground from "@assets/background.jpg";
 
 export default styled.div`
-  background-color: yellowgreen;
   > article {
     min-height: 100vh;
     overflow-x: hidden;

@@ -1,3 +1,4 @@
+import Icon from "@components/Icon";
 import propTypes from "prop-types";
 import SMenuColumn from "./style";
 
@@ -7,7 +8,7 @@ export default function MenuColumn({ buttons }) {
       {buttons.map((item) => {
         return (
           <li key={item.id}>
-            <img src={item.icon} alt="" />
+            <Icon name={item.icon} />
             <span>{item.text}</span>
           </li>
         );

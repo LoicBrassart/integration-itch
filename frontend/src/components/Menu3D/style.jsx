@@ -16,6 +16,8 @@ export default styled.ul`
     background-color: ${color};
     position: relative;
     z-index: var(--zIndex);
+    display: flex;
+    justify-content: space-between;
 
     &:hover {
       transform: translateX(${stepWhenHovered});
