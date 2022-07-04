@@ -1,8 +1,10 @@
+import buttons from "@assets/mocks/buttons";
 import RadialMenu from "@components/RadialMenu";
 import MenuColumn from "@components/MenuColumn";
 import Menu3D from "@components/Menu3D";
 import FunkyIcon from "@components/FunkyIcon";
-import buttons from "@assets/mocks/buttons";
+import Tools from "@components/Tools";
+import Board from "@components/Board";
 import SApp from "./style";
 
 function App() {
@@ -10,35 +12,149 @@ function App() {
     <SApp>
       <article>
         <h2>Menu Radial</h2>
-        <h3>Problematiques</h3>
-        <ul>
-          <li>
-            Proposer un menu qui ne ressemble pas à un menu burger classique.
-          </li>
-        </ul>
-        Configurable:
-        <ul>
-          <li>Angle de départ et arc de répartition des contenus</li>
-        </ul>
-        Todo:
-        <ul>
-          <li>Resize icone burger</li>
-        </ul>
+        <section>
+          <main>
+            <h3>Problematiques</h3>
+            <ul>
+              <li>Menu qui ne ressemble pas à un menu burger classique.</li>
+              <li>Menu adapté pour des actions courantes ou des raccourcis</li>
+            </ul>
+            <h3>Configurable</h3>
+            <ul>
+              <li>Angle de départ</li>
+              <li>Arc de répartition des contenus</li>
+            </ul>
+          </main>
+          <aside>
+            <h3>Todo</h3>
+            <ul>
+              <li>Resize icone burger</li>
+            </ul>
+            <Tools html css />
+          </aside>
+        </section>
       </article>
       <article>
         <RadialMenu buttons={buttons} />
       </article>
-      <article>Menu 3D</article>
+      <article>
+        <h2>Menu 3D</h2>
+        <section>
+          <main>
+            <h3>Problematiques</h3>
+            <ul>
+              <li>
+                PoC sur de la 3D isométrique (illusion d'optique, pas de reelle
+                3D)
+              </li>
+            </ul>
+            <h3>Configurable</h3>
+            <ul>
+              <li>Couleurs</li>
+              <li>Décalage au survol</li>
+              <li>Angle d&rsquo;illusion</li>
+            </ul>
+          </main>
+          <aside>
+            <h3>Todo</h3>
+            <ul>
+              <li>Fix some CSS variables</li>
+              <li>Plus css variables to the main component through props</li>
+            </ul>
+            <Tools html css />
+          </aside>
+        </section>
+      </article>
       <article>
         <Menu3D buttons={buttons} />
       </article>
-      <article>Menu vertical</article>
+      <article>
+        <h2>Menu Vertical</h2>
+        <section>
+          <main>
+            <h3>Problematiques</h3>
+            <ul>
+              <li>Avoir des pop-ins pour indiquer quel bouton est survolé</li>
+            </ul>
+            <h3>Configurable</h3>
+            <ul>
+              <li>N/A</li>
+            </ul>
+          </main>
+          <aside>
+            <h3>Todo</h3>
+            <ul>
+              <li>
+                Les etiquettes apparaissent au survol de leur position (fix du
+                selecteur :hover ?)
+              </li>
+            </ul>
+            <Tools html css />
+          </aside>
+        </section>
+      </article>
       <article>
         <MenuColumn buttons={buttons} />
       </article>
-      <article>Essai coloration SVG</article>
+      <article>
+        <h2>Funky Icon</h2>
+        <section>
+          <main>
+            <h3>Problematiques</h3>
+            <ul>
+              <li>Pouvoir controler les couleurs sur un SVG</li>
+              <li>
+                Faire un composant reutilisable pour afficher les svg issus de
+                game-icons
+              </li>
+              <li>
+                (Jouer avec l&rsquo;idée d&rsquo;un useInterval adapté à React )
+              </li>
+            </ul>
+            <h3>Configurable</h3>
+            <ul>
+              <li>Couleurs (temps reel)</li>
+              <li>Délais</li>
+              <li>Icone (dans une liste pré-établie)</li>
+            </ul>
+          </main>
+          <aside>
+            <h3>Todo</h3>
+            <ul>
+              <li>Ajouter la conf pour la forme de l'icone</li>
+            </ul>
+            <Tools html css />
+          </aside>
+        </section>
+      </article>
       <article>
         <FunkyIcon />
+      </article>
+      <article>
+        <h2>Drag & Drop</h2>
+        <section>
+          <main>
+            <h3>Problematiques</h3>
+            <ul>
+              <li>Implémenter le drag &amp; drop dans un projet React</li>
+            </ul>
+            <h3>Configurable</h3>
+            <ul>
+              <li>N/A</li>
+            </ul>
+          </main>
+          <aside>
+            <h3>Todo</h3>
+            <ul>
+              <li>Jouer avec plusieurs pions ou plusieurs dropzones</li>
+              <li>Implémenter une logique (début de jeu ?)</li>
+            </ul>
+            <Tools html css />
+          </aside>
+        </section>
+      </article>
+      <article>
+        <Board />
       </article>
     </SApp>
   );
