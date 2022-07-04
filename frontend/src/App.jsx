@@ -5,7 +5,19 @@ import Menu3D from "@components/Menu3D";
 import FunkyIcon from "@components/FunkyIcon";
 import Tools from "@components/Tools";
 import Board from "@components/Board";
+import Avatar from "@components/Avatar";
+import AuthForm from "@components/AuthForm";
 import SApp from "./style";
+
+/* IDEAS
+mail
+upload de fichier
+reinit de mdp
+form d'auth complet https://www.youtube.com/watch?v=VX3srL6m2xo&ab_channel=XFIANDEV
+picture comparator
+cloudinary
+chat
+*/
 
 function App() {
   return (
@@ -155,6 +167,13 @@ function App() {
       </article>
       <article>
         <Board />
+      </article>
+      <article>
+        <h2>Authentification</h2>
+      </article>
+      <article>
+        <Avatar />
+        <AuthForm />
       </article>
     </SApp>
   );

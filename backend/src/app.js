@@ -1,7 +1,7 @@
 const express = require("express");
 const path = require("path");
-
 const cors = require("cors");
+const passport = require("passport");
 
 // let's create express app
 
@@ -17,6 +17,7 @@ app.use(
 
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "../public")));
+app.use(passport.initialize());
 
 // load router
 
