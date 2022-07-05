@@ -7,6 +7,7 @@ import Tools from "@components/Tools";
 import Board from "@components/Board";
 import Avatar from "@components/Avatar";
 import AuthForm from "@components/AuthForm";
+import MultiTabForm from "@components/MultiTabForm";
 import SApp from "./style";
 
 /* IDEAS
@@ -143,7 +144,7 @@ function App() {
         <FunkyIcon />
       </article>
       <article>
-        <h2>Drag & Drop</h2>
+        <h2>Drag &amp; Drop</h2>
         <section>
           <main>
             <h3>Problematiques</h3>
@@ -174,6 +175,12 @@ function App() {
       <article>
         <Avatar />
         <AuthForm />
+      </article>
+      <article>
+        <h2>Multi-Tab form</h2>
+      </article>
+      <article>
+        <MultiTabForm />
       </article>
     </SApp>
   );
