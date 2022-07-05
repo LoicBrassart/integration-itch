@@ -9,6 +9,7 @@ import Avatar from "@components/Avatar";
 import AuthForm from "@components/AuthForm";
 import MultiTabForm from "@components/MultiTabForm";
 import SApp from "./style";
+import TimeHandling from "@components/TimeHandling";
 
 /* IDEAS
 mail
@@ -21,6 +22,7 @@ chat
 moment/luxon
 calendrier
 modal
+timer/countdown
 */
 
 function App() {
@@ -184,6 +186,12 @@ function App() {
       </article>
       <article>
         <MultiTabForm />
+      </article>
+      <article>
+        <h2>Manipulations de dates</h2>
+      </article>
+      <article>
+        <TimeHandling />
       </article>
     </SApp>
   );
