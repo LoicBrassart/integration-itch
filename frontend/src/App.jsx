@@ -18,6 +18,9 @@ form d'auth complet https://www.youtube.com/watch?v=VX3srL6m2xo&ab_channel=XFIAN
 picture comparator
 cloudinary
 chat
+moment/luxon
+calendrier
+modal
 */
 
 function App() {
@@ -57,8 +60,8 @@ function App() {
             <h3>Problematiques</h3>
             <ul>
               <li>
-                PoC sur de la 3D isométrique (illusion d'optique, pas de reelle
-                3D)
+                PoC sur de la 3D isométrique (illusion d&apos;optique, pas de
+                reelle 3D)
               </li>
             </ul>
             <h3>Configurable</h3>
@@ -134,7 +137,7 @@ function App() {
           <aside>
             <h3>Todo</h3>
             <ul>
-              <li>Ajouter la conf pour la forme de l'icone</li>
+              <li>Ajouter la conf pour la forme de l&apos;icone</li>
             </ul>
             <Tools html css />
           </aside>
@@ -177,7 +180,7 @@ function App() {
         <AuthForm />
       </article>
       <article>
-        <h2>Multi-Tab form</h2>
+        <h2>Multi-Step form</h2>
       </article>
       <article>
         <MultiTabForm />

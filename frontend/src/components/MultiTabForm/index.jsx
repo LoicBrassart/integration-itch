@@ -2,7 +2,17 @@ import { useState } from "react";
 import SMultiTabForm from "./style";
 
 export default function MultiTabForm() {
-  const [formData, setFormData] = useState({});
+  const [formData, setFormData] = useState({
+    email: "",
+    firstName: "",
+    lastName: "",
+    password: "",
+    passwordBis: "",
+    securityQuestion: "",
+    securityAnswer: "",
+    favPets: "",
+    favTheme: "",
+  });
   const [currStep, setCurrStep] = useState(1);
 
   const hPrev = () => {
@@ -119,10 +129,10 @@ export default function MultiTabForm() {
         sécurité... T'aurais eu l'air malin ! */}
         <input type="submit" />
       </fieldset>
-      <button type="button" onClick={hPrev}>
+      <button type="button" onClick={hPrev} disabled={currStep === 1}>
         Prev.
       </button>
-      <button type="button" onClick={hNext}>
+      <button type="button" onClick={hNext} disabled={currStep === 4}>
         Next
       </button>
     </SMultiTabForm>
