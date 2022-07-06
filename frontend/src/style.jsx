@@ -6,7 +6,7 @@ export default styled.div`
   @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap");
 
   > article {
-    min-height: 90vh;
+    height: 90vh;
     font-family: "Roboto", sans-serif;
 
     &:nth-of-type(2n + 1) {

@@ -12,7 +12,8 @@ export default function Avatar() {
         }
         alt="User avatar"
       />
-      Hey {name || "Stranger"}!
+      <p>Welcome</p>
+      <p>{name || "Stranger"}!</p>
     </SAvatar>
   );
 }

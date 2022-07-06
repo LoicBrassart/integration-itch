@@ -40,11 +40,34 @@ export default function AuthForm() {
 
   return (
     <SAuthForm onSubmit={hSubmit}>
-      <input type="text" name="email" onChange={hChange} />
-      <input type="text" name="name" onChange={hChange} />
-      <input type="password" name="password" onChange={hChange} />
-      <input type="password" name="passwordBis" onChange={hChange} />
-      <input type="submit" />
+      <legend>Inscription</legend>
+      <input
+        type="text"
+        name="email"
+        placeholder="Votre email"
+        onChange={hChange}
+      />
+      <input
+        type="text"
+        name="name"
+        placeholder="Votre nom"
+        onChange={hChange}
+      />
+      <br />
+      <input
+        type="password"
+        name="password"
+        placeholder="Votre password"
+        onChange={hChange}
+      />
+      <input
+        type="password"
+        name="passwordBis"
+        placeholder="Votre password (vérif.)"
+        onChange={hChange}
+      />
+      <br />
+      <input type="submit" value="Go!" />
       <ToastContainer />
     </SAuthForm>
   );

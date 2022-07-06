@@ -1,6 +1,6 @@
-import useInterval from "@services/useInterval";
 import { DateTime, Settings } from "luxon";
 import { useEffect, useState } from "react";
+import useInterval from "@services/useInterval";
 import STimeHandling from "./style";
 
 export default function TimeHandling() {
@@ -18,7 +18,7 @@ export default function TimeHandling() {
 
   useInterval(() => {
     setNow(DateTime.now());
-    if (dateEnd) {
+    if (dateEnd && dateNow) {
       setCountDown(
         dateEnd
           .diff(dateNow, ["days", "hours", "minutes", "seconds"])
@@ -29,7 +29,7 @@ export default function TimeHandling() {
 
   return (
     <STimeHandling>
-      {dateNow && dateStart && dateEnd && (
+      {dateNow && dateStart && dateEnd && countDown && (
         <>
           <p>Maintenant: {dateNow.toFormat(format)}</p>
           <p>

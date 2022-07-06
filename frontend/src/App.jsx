@@ -8,8 +8,9 @@ import Board from "@components/Board";
 import Avatar from "@components/Avatar";
 import AuthForm from "@components/AuthForm";
 import MultiTabForm from "@components/MultiTabForm";
-import SApp from "./style";
 import TimeHandling from "@components/TimeHandling";
+import SApp from "./style";
+import HoverEffect from "@components/HoverEffect";
 
 /* IDEAS
 mail
@@ -23,6 +24,7 @@ moment/luxon
 calendrier
 modal
 timer/countdown
+moteur de recherche multi-fields
 */
 
 function App() {
@@ -178,8 +180,8 @@ function App() {
         <h2>Authentification</h2>
       </article>
       <article>
-        <Avatar />
         <AuthForm />
+        <Avatar />
       </article>
       <article>
         <h2>Multi-Step form</h2>
@@ -192,6 +194,12 @@ function App() {
       </article>
       <article>
         <TimeHandling />
+      </article>
+      <article>
+        <h2>Hover effect</h2>
+      </article>
+      <article>
+        <HoverEffect />
       </article>
     </SApp>
   );
