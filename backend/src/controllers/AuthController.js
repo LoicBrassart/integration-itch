@@ -1,15 +1,21 @@
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const models = require("../models");
+const { uploadImage } = require("../services/cloudinary");
 
 class AuthController {
-  static signup = (req, res) => {
+  static signup = async (req, res) => {
     const user = req.body;
 
     user.password = bcrypt.hashSync(
       user.password,
       parseInt(process.env.CRYPT_ROUNDS, 10)
     );
+
+    console.log("---START", req.file);
+    const feedbackImg = await uploadImage(req.file.path);
+    user.avatar = feedbackImg.secure_url;
+    console.log("---", feedbackImg, "---END");
 
     models.user
       .insert(user)

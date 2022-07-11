@@ -9,21 +9,19 @@ import Avatar from "@components/Avatar";
 import AuthForm from "@components/AuthForm";
 import MultiTabForm from "@components/MultiTabForm";
 import TimeHandling from "@components/TimeHandling";
-import SApp from "./style";
 import HoverEffect from "@components/HoverEffect";
+import SApp from "./style";
 
 /* IDEAS
 mail
-upload de fichier
 reinit de mdp
 form d'auth complet https://www.youtube.com/watch?v=VX3srL6m2xo&ab_channel=XFIANDEV
 picture comparator
 cloudinary
+upload de fichier
 chat
-moment/luxon
 calendrier
 modal
-timer/countdown
 moteur de recherche multi-fields
 */
 

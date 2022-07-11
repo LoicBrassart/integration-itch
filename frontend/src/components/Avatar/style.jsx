@@ -15,6 +15,7 @@ export default styled.div`
     top: -1em;
     left: -1em;
     width: 4em;
+    aspect-ratio: 1;
     border-radius: 50%;
   }
 

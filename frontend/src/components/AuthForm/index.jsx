@@ -11,26 +11,47 @@ export default function AuthForm() {
     name: "",
     password: "",
     passwordBis: "",
+    avatar: "",
   });
   const api = useApi();
   const dispatch = useDispatch();
 
   const hChange = (evt) => {
-    const { name, value, type, checked } = evt.target;
-    const newValue = type === "checkbox" ? checked : value;
+    const { name, value, type, checked, files } = evt.target;
+    let newValue = null;
+    switch (type) {
+      case "checkbox":
+        newValue = checked;
+        break;
+      case "file":
+        [newValue] = files;
+        break;
+      default:
+        newValue = value;
+    }
     setFormData({ ...formData, [name]: newValue });
   };
 
   const hSubmit = (evt) => {
     evt.preventDefault();
+
     if (formData.password !== formData.passwordBis) return;
+    delete formData.passwordBis; //WARN Mutation
+
+    const finalData = Object.keys(formData).reduce((accu, key) => {
+      accu.append(key, formData[key]);
+      return accu;
+    }, new FormData());
 
     api
-      .post("/auth/signup", { ...formData, passwordBis: null })
+      .post("/auth/signup", finalData)
       .then(({ data }) => {
         const { token, user } = data;
         api.defaults.headers.authorization = `Bearer ${token}`;
-        dispatch({ type: "USER_LOGIN", payload: user });
+        dispatch({ type: "USER_LOGIN", payload: { ...user, token } });
+        console.warn(
+          "TODO !!! Remove token from Redux and implement httpOnly cookie !"
+        );
         toast(`Owi, welcome ${user.name} !`);
       })
       .catch(() => {
@@ -39,7 +60,7 @@ export default function AuthForm() {
   };
 
   return (
-    <SAuthForm onSubmit={hSubmit}>
+    <SAuthForm onSubmit={hSubmit} method="post" enctype="multipart/form-data">
       <legend>Inscription</legend>
       <input
         type="text"
@@ -67,6 +88,12 @@ export default function AuthForm() {
         onChange={hChange}
       />
       <br />
+      <input
+        type="file"
+        name="avatar"
+        placeholder="Votre avatar"
+        onChange={hChange}
+      />
       <input type="submit" value="Go!" />
       <ToastContainer />
     </SAuthForm>
