@@ -1,5 +1,5 @@
-import { DateTime, Settings } from "luxon";
 import { useEffect, useState } from "react";
+import { DateTime, Settings } from "luxon";
 import useInterval from "@services/useInterval";
 import STimeHandling from "./style";
 
@@ -42,9 +42,15 @@ export default function TimeHandling() {
           </p>
           <p>
             Final Countdown:{" "}
-            {`${countDown.days}:${countDown.hours}:${
-              countDown.minutes
-            }:${Math.floor(countDown.seconds)}`}
+            {`${`${countDown.days}`.padStart(
+              2,
+              "0"
+            )}:${`${countDown.hours}`.padStart(
+              2,
+              "0"
+            )}:${`${countDown.minutes}`.padStart(2, "0")}:${`${Math.floor(
+              countDown.seconds
+            )}`.padStart(2, "0")}`}
           </p>
         </>
       )}

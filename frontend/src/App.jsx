@@ -17,8 +17,6 @@ mail
 reinit de mdp
 form d'auth complet https://www.youtube.com/watch?v=VX3srL6m2xo&ab_channel=XFIANDEV
 picture comparator
-cloudinary
-upload de fichier
 chat
 calendrier
 modal
