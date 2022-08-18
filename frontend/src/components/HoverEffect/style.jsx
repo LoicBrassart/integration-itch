@@ -21,11 +21,11 @@ export default styled.div`
   .gallery {
     display: flex;
     flex-flow: row nowrap;
+    align-items: space-evenly;
 
     li {
       padding: 0.5em;
       transition: 0.2s linear all;
-
       &:hover {
         transform: translateY(-1em);
       }

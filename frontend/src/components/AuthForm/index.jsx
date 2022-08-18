@@ -65,33 +65,43 @@ export default function AuthForm() {
       <input
         type="text"
         name="email"
+        value={formData.email}
         placeholder="Votre email"
+        autoComplete="email"
         onChange={hChange}
       />
       <input
         type="text"
         name="name"
+        value={formData.name}
         placeholder="Votre nom"
+        autoComplete="nickname"
         onChange={hChange}
       />
       <br />
       <input
         type="password"
         name="password"
+        value={formData.password}
         placeholder="Votre password"
+        autoComplete="new-password"
         onChange={hChange}
       />
       <input
         type="password"
         name="passwordBis"
+        value={formData.passwordBis}
         placeholder="Votre password (vérif.)"
+        autoComplete="new-password"
         onChange={hChange}
       />
       <br />
       <input
         type="file"
         name="avatar"
+        value={formData.avatar}
         placeholder="Votre avatar"
+        autoComplete="photo"
         onChange={hChange}
       />
       <input type="submit" value="Go!" />

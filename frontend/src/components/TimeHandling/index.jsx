@@ -12,8 +12,8 @@ export default function TimeHandling() {
 
   useEffect(() => {
     Settings.defaultLocale = "fr";
-    setStart(DateTime.fromISO("2022-02-28T09:00:00"));
-    setEnd(DateTime.fromISO("2022-07-29T17:30:00"));
+    setStart(DateTime.fromISO("2022-09-12T09:00:00"));
+    setEnd(DateTime.fromISO("2023-02-12T17:30:00"));
   }, []);
 
   useInterval(() => {

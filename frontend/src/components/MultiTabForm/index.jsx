@@ -41,6 +41,7 @@ export default function MultiTabForm() {
           type="email"
           name="email"
           placeholder="Your email"
+          autoComplete="email"
           value={formData.email}
           onChange={hChange}
         />
@@ -48,14 +49,16 @@ export default function MultiTabForm() {
           type="text"
           name="firstName"
           placeholder="Your first name"
+          autoComplete="first-name"
           value={formData.firstName}
           onChange={hChange}
         />
         <input
           type="text"
           name="lastName"
-          placeholder="Your last name"
           value={formData.lastName}
+          placeholder="Your last name"
+          autoComplete="last-name"
           onChange={hChange}
         />
       </fieldset>
@@ -64,15 +67,17 @@ export default function MultiTabForm() {
         <input
           type="password"
           name="password"
-          placeholder="Your password"
           value={formData.password}
+          placeholder="Your password"
+          autoComplete="new-password"
           onChange={hChange}
         />
         <input
           type="password"
           name="passwordBis"
-          placeholder="Your password (check)"
           value={formData.passwordBis}
+          placeholder="Your password (check)"
+          autoComplete="new-password"
           onChange={hChange}
         />
         <select
