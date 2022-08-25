@@ -31,7 +31,7 @@ export default styled.div`
       }
 
       li {
-        padding-top: 0.5em;
+        margin-bottom: 0.5em;
       }
 
       section {

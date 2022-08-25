@@ -139,7 +139,7 @@ function App() {
             <ul>
               <li>Ajouter la conf pour la forme de l&apos;icone</li>
             </ul>
-            <Tools html css />
+            <Tools html css react />
           </aside>
         </section>
       </article>
@@ -165,7 +165,7 @@ function App() {
               <li>Jouer avec plusieurs pions ou plusieurs dropzones</li>
               <li>Implémenter une logique (début de jeu ?)</li>
             </ul>
-            <Tools html css />
+            <Tools html css js react />
           </aside>
         </section>
       </article>

@@ -1,4 +1,12 @@
 import PropTypes from "prop-types";
+import {
+  FaHtml5,
+  FaCss3,
+  FaJs,
+  FaReact,
+  FaNodeJs,
+  FaDatabase,
+} from "react-icons/fa";
 import STools from "./style";
 
 export default function Tools({ html, css, js, react, express, sql }) {
@@ -6,12 +14,24 @@ export default function Tools({ html, css, js, react, express, sql }) {
     <>
       <h3>Tools</h3>
       <STools>
-        {html && <li>HTML</li>}
-        {css && <li>CSS</li>}
-        {js && <li>JS Vanilla</li>}
-        {react && <li>React</li>}
-        {express && <li>Express</li>}
-        {sql && <li>MySQL</li>}
+        <li className={html ? "active html" : "html"}>
+          <FaHtml5 />
+        </li>
+        <li className={css ? "active css" : "css"}>
+          <FaCss3 />
+        </li>
+        <li className={js ? "active js" : "js"}>
+          <FaJs />
+        </li>
+        <li className={react ? "active react" : "react"}>
+          <FaReact />
+        </li>
+        <li className={express ? "active node" : "node"}>
+          <FaNodeJs />
+        </li>
+        <li className={sql ? "active mysql" : "mysql"}>
+          <FaDatabase />
+        </li>
       </STools>
     </>
   );
