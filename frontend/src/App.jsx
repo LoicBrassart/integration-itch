@@ -12,6 +12,7 @@ import TimeHandling from "@components/TimeHandling";
 import HoverEffect from "@components/HoverEffect";
 import TopicsGallery from "@components/TopicsGallery";
 import AlterUnhoveredImages from "@components/AlterUnhoveredImages";
+import FibonacciGallery from "@components/FibonacciGallery";
 import SApp from "./style";
 
 /* IDEAS
@@ -210,6 +211,12 @@ function App() {
       </article>
       <article>
         <AlterUnhoveredImages />
+      </article>
+      <article>
+        <h2>Fibonacci Gallery</h2>
+      </article>
+      <article>
+        <FibonacciGallery />
       </article>
     </SApp>
   );
