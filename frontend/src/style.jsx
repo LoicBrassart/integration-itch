@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import bground from "@assets/background.jpg";
+import bground from "@assets/pictures/background.jpg";
 
 export default styled.div`
   @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");

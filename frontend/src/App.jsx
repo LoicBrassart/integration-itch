@@ -10,6 +10,8 @@ import AuthForm from "@components/AuthForm";
 import MultiTabForm from "@components/MultiTabForm";
 import TimeHandling from "@components/TimeHandling";
 import HoverEffect from "@components/HoverEffect";
+import TopicsGallery from "@components/TopicsGallery";
+import AlterUnhoveredImages from "@components/AlterUnhoveredImages";
 import SApp from "./style";
 
 /* IDEAS
@@ -196,6 +198,18 @@ function App() {
       </article>
       <article>
         <HoverEffect />
+      </article>
+      <article>
+        <h2>Gallery of topics (source: DeviantArt)</h2>
+      </article>
+      <article>
+        <TopicsGallery />
+      </article>
+      <article>
+        <h2>Focus by blurring unhovered contents</h2>
+      </article>
+      <article>
+        <AlterUnhoveredImages />
       </article>
     </SApp>
   );
