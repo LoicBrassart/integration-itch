@@ -13,6 +13,7 @@ import HoverEffect from "@components/HoverEffect";
 import TopicsGallery from "@components/TopicsGallery";
 import AlterUnhoveredImages from "@components/AlterUnhoveredImages";
 import FibonacciGallery from "@components/FibonacciGallery";
+import MultiToggle from "@components/MultiToggle";
 import SApp from "./style";
 
 /* IDEAS
@@ -24,6 +25,7 @@ chat
 calendrier
 modal
 moteur de recherche multi-fields
+https://codepen.io/aaroniker/pen/XWYpyNM
 */
 
 function App() {
@@ -217,6 +219,12 @@ function App() {
       </article>
       <article>
         <FibonacciGallery />
+      </article>
+      <article>
+        <h2>Multi-values toggle</h2>
+      </article>
+      <article>
+        <MultiToggle />
       </article>
     </SApp>
   );
