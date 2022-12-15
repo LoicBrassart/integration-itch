@@ -14,6 +14,7 @@ import TopicsGallery from "@components/TopicsGallery";
 import AlterUnhoveredImages from "@components/AlterUnhoveredImages";
 import FibonacciGallery from "@components/FibonacciGallery";
 import MultiToggle from "@components/MultiToggle";
+import Searchbar from "@components/Searchbar";
 import SApp from "./style";
 
 /* IDEAS
@@ -26,6 +27,8 @@ calendrier
 modal
 moteur de recherche multi-fields
 https://codepen.io/aaroniker/pen/XWYpyNM
+https://codepen.io/simeydotme/pen/MWXxKrP
+
 */
 
 function App() {
@@ -225,6 +228,12 @@ function App() {
       </article>
       <article>
         <MultiToggle />
+      </article>
+      <article>
+        <h2>Searchbar with separated results</h2>
+      </article>
+      <article>
+        <Searchbar />
       </article>
     </SApp>
   );

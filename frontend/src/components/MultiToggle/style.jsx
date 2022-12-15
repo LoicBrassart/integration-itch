@@ -24,7 +24,7 @@ export default styled.button`
     position: absolute;
     top: 0;
     left: 0;
-    color: grey;
+    color: blue;
     transition: 0.4s ease-in-out all;
   }
   .currentIcon {

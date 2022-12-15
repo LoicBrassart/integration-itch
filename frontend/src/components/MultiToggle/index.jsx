@@ -1,9 +1,24 @@
 import { useState, createElement } from "react";
 import { FaAdn, FaAnchor, FaBeer } from "react-icons/fa";
+import {
+  GiPocketWatch,
+  GiSteampunkGoggles,
+  GiZeppelin,
+  GiAirBalloon,
+} from "react-icons/gi";
+
 import SMultiToggle from "./style";
 
 export default function MultiToggle() {
-  const [options] = useState([FaBeer, FaAdn, FaAnchor]);
+  const [options] = useState([
+    FaBeer,
+    FaAdn,
+    FaAnchor,
+    GiPocketWatch,
+    GiSteampunkGoggles,
+    GiZeppelin,
+    GiAirBalloon,
+  ]);
   const [currOption, setCurrOption] = useState(1);
 
   const hNextOption = () => {
