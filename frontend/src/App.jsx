@@ -45,6 +45,7 @@ function App() {
             </ul>
             <h3>Configurable</h3>
             <ul>
+              <li>Contenu</li>
               <li>Angle de départ</li>
               <li>Arc de répartition des contenus</li>
             </ul>
@@ -74,6 +75,7 @@ function App() {
             </ul>
             <h3>Configurable</h3>
             <ul>
+              <li>Contenu</li>
               <li>Couleurs</li>
               <li>Décalage au survol</li>
               <li>Angle d&rsquo;illusion</li>
@@ -82,8 +84,7 @@ function App() {
           <aside>
             <h3>Todo</h3>
             <ul>
-              <li>Fix some CSS variables</li>
-              <li>Plus css variables to the main component through props</li>
+              <li>Permettre de configurer le style via des props ?</li>
             </ul>
             <Tools html css />
           </aside>
@@ -182,37 +183,170 @@ function App() {
       </article>
       <article>
         <h2>Authentification</h2>
+        <section>
+          <main>
+            <h3>Problematiques</h3>
+            <ul>
+              <li>Formulaire d&apos;inscription</li>
+            </ul>
+            <h3>Configurable</h3>
+            <ul>
+              <li>N/A</li>
+            </ul>
+          </main>
+          <aside>
+            <h3>Todo</h3>
+            <ul>
+              <li>
+                Fix l&apos;upload d&apos;image (broken React: file inputs are
+                uncontrolled)
+              </li>
+            </ul>
+            <Tools html css js react express sql />
+          </aside>
+        </section>
       </article>
       <article>
         <AuthForm />
         <Avatar />
       </article>
       <article>
-        <h2>Multi-Step form</h2>
+        <h2>Multi-step form</h2>
+        <section>
+          <main>
+            <h3>Problematiques</h3>
+            <ul>
+              <li>
+                Avoir un formulaire qui s&apos;affichera en plueisuers
+                &eacute;tapes successives
+              </li>
+              <li>Pratiquer les formulaires en React</li>
+              <li>G&eacute;rer un state complexe</li>
+            </ul>
+            <h3>Configurable</h3>
+            <ul>
+              <li>N/A</li>
+            </ul>
+          </main>
+          <aside>
+            <h3>Todo</h3>
+            <ul>
+              <li>Lien vefrs le back?</li>
+            </ul>
+            <Tools react />
+          </aside>
+        </section>
       </article>
       <article>
         <MultiTabForm />
       </article>
       <article>
-        <h2>Manipulations de dates</h2>
+        <h2>Manipulation de dates</h2>
+        <section>
+          <main>
+            <h3>Problematiques</h3>
+            <ul>
+              <li>Avoir un PoC de manip de dates en JS ave la lib Luxon</li>
+              <li>
+                Voir des exemples &ldquo;simples&rdquo; de trucs faisables en
+                termes de manips
+              </li>
+            </ul>
+            <h3>Configurable</h3>
+            <ul>
+              <li>N/A</li>
+            </ul>
+          </main>
+          <aside>
+            <h3>Todo</h3>
+            <ul>
+              <li>N/A</li>
+            </ul>
+            <Tools react />
+          </aside>
+        </section>
       </article>
       <article>
         <TimeHandling />
       </article>
       <article>
-        <h2>Hover effect</h2>
+        <h2>Effet Hover</h2>
+        <section>
+          <main>
+            <h3>Problematiques</h3>
+            <ul>
+              <li>
+                Reproduire un effet trouv&eacute; sur un site
+                &ldquo;design&rdquo;
+              </li>
+            </ul>
+            <h3>Configurable</h3>
+            <ul>
+              <li>N/A</li>
+            </ul>
+          </main>
+          <aside>
+            <h3>Todo</h3>
+            <ul>
+              <li>Fix: broken (Chrome + FFox)</li>
+            </ul>
+            <Tools react />
+          </aside>
+        </section>
       </article>
       <article>
         <HoverEffect />
       </article>
       <article>
-        <h2>Gallery of topics (source: DeviantArt)</h2>
+        <h2>Miniature de galerie (source: DeviantArt)</h2>
+        <section>
+          <main>
+            <h3>Problematiques</h3>
+            <ul>
+              <li>Reproduire un effet trouv&eacute; sur DeviantArt</li>
+            </ul>
+            <h3>Configurable</h3>
+            <ul>
+              <li>N/A</li>
+            </ul>
+          </main>
+          <aside>
+            <h3>Todo</h3>
+            <ul>
+              <li>N/A</li>
+            </ul>
+            <Tools css />
+          </aside>
+        </section>
       </article>
       <article>
         <TopicsGallery />
       </article>
       <article>
         <h2>Focus by blurring unhovered contents</h2>
+        <h2>
+          Mise en avant d&apos;un &eacute;l&eacute;ment au survol via des effets
+          visuels
+        </h2>
+        <section>
+          <main>
+            <h3>Problematiques</h3>
+            <ul>
+              <li>Reproduire un effet trouv&eacute; sur le Web</li>
+            </ul>
+            <h3>Configurable</h3>
+            <ul>
+              <li>N/A</li>
+            </ul>
+          </main>
+          <aside>
+            <h3>Todo</h3>
+            <ul>
+              <li>Fix largeur (responsive)</li>
+            </ul>
+            <Tools css />
+          </aside>
+        </section>
       </article>
       <article>
         <AlterUnhoveredImages />

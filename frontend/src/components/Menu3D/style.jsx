@@ -1,10 +1,13 @@
 import styled from "styled-components";
 
-const mainSkew = "15deg";
-const subSkew = "45deg";
+// Configurable
 const depth = "2em";
+const mainSkew = "15deg"; // 45 max ?
 const stepWhenHovered = "-15px";
 const color = "violet";
+
+// Constant
+const subSkew = "45deg";
 
 export default styled.ul`
   transform: skew(0, -${mainSkew});

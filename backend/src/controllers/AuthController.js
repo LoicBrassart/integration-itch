@@ -12,10 +12,10 @@ class AuthController {
       parseInt(process.env.CRYPT_ROUNDS, 10)
     );
 
-    console.log("---START", req.file);
-    const feedbackImg = await uploadImage(req.file.path);
-    user.avatar = feedbackImg.secure_url;
-    console.log("---", feedbackImg, "---END");
+    if (req.file) {
+      const feedbackImg = await uploadImage(req.file.path);
+      user.avatar = feedbackImg.secure_url;
+    }
 
     models.user
       .insert(user)

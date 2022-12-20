@@ -18,7 +18,8 @@ passport.use(
 
           const user = result[0];
           const isPasswordOK = bcrypt.compareSync(formPassword, user.password);
-          if (!isPasswordOK) return done(null, false, "Wrong password!");
+          if (!isPasswordOK)
+            return done(null, false, { msg: "Wrong password!" });
 
           delete user.password;
           return done(null, user);

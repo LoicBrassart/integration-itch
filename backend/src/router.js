@@ -13,5 +13,8 @@ router.post(
   passport.authenticate("local", { session: false }),
   AuthController.login
 );
+router.get("/protected", passport.authenticate("jwt"), (req, res) => {
+  res.send(`Welcome ${req.user.name}`);
+});
 
 module.exports = router;
