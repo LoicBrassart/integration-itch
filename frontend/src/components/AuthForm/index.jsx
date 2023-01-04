@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import { useDispatch } from "react-redux";
 import "react-toastify/dist/ReactToastify.css";
@@ -13,19 +13,20 @@ export default function AuthForm() {
     passwordBis: "",
     avatar: "",
   });
+  const inputRef = useRef();
+
   const api = useApi();
   const dispatch = useDispatch();
 
   const hChange = (evt) => {
-    const { name, value, type, checked, files } = evt.target;
+    const { name, value, type, checked } = evt.target;
     let newValue = null;
     switch (type) {
       case "checkbox":
         newValue = checked;
         break;
       case "file":
-        [newValue] = files;
-        break;
+        return;
       default:
         newValue = value;
     }
@@ -36,10 +37,14 @@ export default function AuthForm() {
     evt.preventDefault();
 
     if (formData.password !== formData.passwordBis) return;
-    delete formData.passwordBis; //WARN Mutation
+    delete formData.passwordBis; // WARN Mutation
 
     const finalData = Object.keys(formData).reduce((accu, key) => {
-      accu.append(key, formData[key]);
+      if (key === "avatar") {
+        accu.append("avatar", inputRef.current.files[0]);
+      } else {
+        accu.append(key, formData[key]);
+      }
       return accu;
     }, new FormData());
 
@@ -60,7 +65,7 @@ export default function AuthForm() {
   };
 
   return (
-    <SAuthForm onSubmit={hSubmit} method="post" enctype="multipart/form-data">
+    <SAuthForm onSubmit={hSubmit} encType="multipart/form-data">
       <legend>Inscription</legend>
       <input
         type="text"
@@ -99,10 +104,11 @@ export default function AuthForm() {
       <input
         type="file"
         name="avatar"
-        value={formData.avatar}
+        // value={formData.avatar}
         placeholder="Votre avatar"
         autoComplete="photo"
-        onChange={hChange}
+        // onChange={hChange} // No hChange for file inputs (security)
+        ref={inputRef}
       />
       <input type="submit" value="Go!" />
       <ToastContainer />
