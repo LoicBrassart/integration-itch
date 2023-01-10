@@ -15,6 +15,7 @@ import AlterUnhoveredImages from "@components/AlterUnhoveredImages";
 import FibonacciGallery from "@components/FibonacciGallery";
 import MultiToggle from "@components/MultiToggle";
 import Searchbar from "@components/Searchbar";
+import Doughnut from "@components/Doughnut";
 import SApp from "./style";
 
 /* IDEAS
@@ -368,6 +369,12 @@ function App() {
       </article>
       <article>
         <Searchbar />
+      </article>
+      <article>
+        <h2>Create a Chart</h2>
+      </article>
+      <article>
+        <Doughnut />
       </article>
     </SApp>
   );
