@@ -1,7 +1,7 @@
 const express = require("express");
 const passport = require("passport");
 const multer = require("multer");
-const { AuthController } = require("./controllers");
+const { AuthController, contactController } = require("./controllers");
 
 const upload = multer({ dest: "tmp/" });
 
@@ -13,7 +13,12 @@ router.post(
   passport.authenticate("local", { session: false }),
   AuthController.login
 );
-router.get("/protected", passport.authenticate("jwt"), (req, res) => {
+router.post("/contact", contactController.post);
+
+// Auth Wall
+router.use(passport.authenticate("jwt"));
+
+router.get("/protected", (req, res) => {
   res.send(`Welcome ${req.user.name}`);
 });
 

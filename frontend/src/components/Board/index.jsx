@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { DndProvider, useDrag, useDrop } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
+import propTypes from "prop-types";
 import Icon from "@components/Icon";
 import { SBoard, SDropZone, SPawn } from "./style";
 
@@ -35,7 +36,7 @@ function Pawn() {
     end: (item, monitor) => {
       const dropResult = monitor.getDropResult();
       if (item && dropResult) {
-        console.log(`You dropped ${item.name} into ${dropResult.name}!`);
+        console.warn(`You dropped ${item.name} into ${dropResult.name}!`);
         setX(dropResult.x);
         setY(dropResult.y);
       }
@@ -71,3 +72,7 @@ export default function Board() {
     </DndProvider>
   );
 }
+DropZone.propTypes = {
+  x: propTypes.number.isRequired,
+  y: propTypes.number.isRequired,
+};

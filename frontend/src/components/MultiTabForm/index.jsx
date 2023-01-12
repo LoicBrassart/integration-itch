@@ -30,7 +30,7 @@ export default function MultiTabForm() {
 
   const hSubmit = (evt) => {
     evt.preventDefault();
-    console.log("Here we send everything!");
+    // Here we send everything!
   };
 
   return (

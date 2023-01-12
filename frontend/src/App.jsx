@@ -16,19 +16,48 @@ import FibonacciGallery from "@components/FibonacciGallery";
 import MultiToggle from "@components/MultiToggle";
 import Searchbar from "@components/Searchbar";
 import Doughnut from "@components/Doughnut";
+import ContactForm from "@components/ContactForm";
 import SApp from "./style";
 
-/* IDEAS
-mail
-reinit de mdp
-form d'auth complet https://www.youtube.com/watch?v=VX3srL6m2xo&ab_channel=XFIANDEV
-picture comparator
-chat
-calendrier
-modal
-moteur de recherche multi-fields
-https://codepen.io/aaroniker/pen/XWYpyNM
-https://codepen.io/simeydotme/pen/MWXxKrP
+/* 
+// IDEAS
+- mail https://github.com/WildCodeSchool/emailing-nodemailer
+- login
+- reinit de mdp
+- form d'auth complet https://www.youtube.com/watch?v=VX3srL6m2xo&ab_channel=XFIANDEV
+- picture comparator
+- chat
+- dashboard
+- i18n https://phrase.com/blog/posts/react-i18n-best-libraries/#React-intl
+- calendrier
+- modal https://medium.com/tinyso/how-to-create-a-modal-component-in-react-from-basic-to-advanced-a3357a2a716a
+- moteur de recherche multi-fields
+- Glow Button https://codepen.io/aaroniker/pen/XWYpyNM
+- Aqua Buttons https://codepen.io/simeydotme/pen/MWXxKrP
+- Range input https://codepen.io/codemediaweb/pen/NWvjBXb
+- Galerie: mouse follower + parallax https://codepen.io/creativeocean/pen/YzvoMRg
+- Eclairage temps reel https://codepen.io/kitjenson/pen/VwBmeLM
+- Pokemon pixelart https://codepen.io/gabriellewee/pen/KKQwydY
+
+// TUTOS
+- https://www.daggala.com/reusable-media-queries-with-styled-components/
+- https://egghead.io/lessons/javascript-redux-persisting-the-state-to-the-local-storage
+- https://medium.com/tinyso/how-to-create-a-modal-component-in-react-from-basic-to-advanced-a3357a2a716a
+
+// DOC
+- https://thecodebarbarian.com/80-20-guide-to-express-error-handling#:~:text=Express%20error%20handling%20middleware%20lets,to%20respond%20to%20the%20request.
+- https://regex101.com/
+- https://redux.js.org/redux-toolkit/overview
+- https://goodui.org/
+
+// TOOLS
+- https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack
+- https://www.npmjs.com/package/vite-plugin-react-svg
+- https://jsonvisio.com/
+- https://caninclude.glitch.me/
+- https://cssfx.netlify.app/
+- https://fontjoy.com/
+- https://recoiljs.org/fr/docs/introduction/getting-started
 
 */
 
@@ -371,10 +400,16 @@ function App() {
         <Searchbar />
       </article>
       <article>
-        <h2>Create a Chart</h2>
+        <h2>Créer des graphes dynamiques</h2>
       </article>
       <article>
         <Doughnut />
+      </article>
+      <article>
+        <h2>Envoyer un mail</h2>
+      </article>
+      <article>
+        <ContactForm />
       </article>
     </SApp>
   );
