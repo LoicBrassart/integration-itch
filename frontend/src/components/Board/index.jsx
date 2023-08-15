@@ -73,6 +73,6 @@ export default function Board() {
   );
 }
 DropZone.propTypes = {
-  x: propTypes.number.isRequired,
-  y: propTypes.number.isRequired,
+  x: propTypes.string.isRequired,
+  y: propTypes.string.isRequired,
 };

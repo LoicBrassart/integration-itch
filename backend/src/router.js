@@ -2,10 +2,13 @@ const express = require("express");
 const passport = require("passport");
 const multer = require("multer");
 const { AuthController, contactController } = require("./controllers");
+const UserController = require("./controllers/UserController");
 
 const upload = multer({ dest: "tmp/" });
 
 const router = express.Router();
+
+router.get("/users", UserController.browse);
 
 router.post("/auth/signup", upload.single("avatar"), AuthController.signup);
 router.post(

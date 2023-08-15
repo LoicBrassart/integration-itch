@@ -17,17 +17,18 @@ import MultiToggle from "@components/MultiToggle";
 import Searchbar from "@components/Searchbar";
 import Doughnut from "@components/Doughnut";
 import ContactForm from "@components/ContactForm";
+import Chat from "@components/Chat";
 import SApp from "./style";
 
 /* 
 // IDEAS
-- mail https://github.com/WildCodeSchool/emailing-nodemailer
 - login
 - reinit de mdp
 - form d'auth complet https://www.youtube.com/watch?v=VX3srL6m2xo&ab_channel=XFIANDEV
 - picture comparator
 - chat
 - dashboard
+- design system
 - i18n https://phrase.com/blog/posts/react-i18n-best-libraries/#React-intl
 - calendrier
 - modal https://medium.com/tinyso/how-to-create-a-modal-component-in-react-from-basic-to-advanced-a3357a2a716a
@@ -38,6 +39,7 @@ import SApp from "./style";
 - Galerie: mouse follower + parallax https://codepen.io/creativeocean/pen/YzvoMRg
 - Eclairage temps reel https://codepen.io/kitjenson/pen/VwBmeLM
 - Pokemon pixelart https://codepen.io/gabriellewee/pen/KKQwydY
+- TypeScript
 
 // TUTOS
 - https://www.daggala.com/reusable-media-queries-with-styled-components/
@@ -410,6 +412,12 @@ function App() {
       </article>
       <article>
         <ContactForm />
+      </article>
+      <article>
+        <h2>Chat</h2>
+      </article>
+      <article>
+        <Chat />
       </article>
     </SApp>
   );

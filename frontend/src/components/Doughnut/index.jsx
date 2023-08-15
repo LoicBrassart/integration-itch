@@ -1,39 +1,34 @@
+import useApi from "@services/useApi";
 import { Chart } from "chart.js/auto";
 import { useRef, useEffect, useState } from "react";
 import Styled from "./style";
 
 export default function Doughnut() {
-  const data = [
-    {
-      firstname: "Valentin",
-      lastname: "Waquet",
-      birthYear: 1996,
-    },
-    {
-      firstname: "Romain",
-      lastname: "Haddad",
-      birthYear: 1995,
-    },
-  ];
-
-  const [, setDoughnut] = useState(null);
+  const [apiData, setApiData] = useState([]);
   const doughnutCanvas = useRef(null);
+  const api = useApi();
+
+  useEffect(() => {
+    api.get("/users").then(({ data }) => {
+      setApiData(data);
+    });
+  }, []);
 
   useEffect(async () => {
-    const chart = await new Chart(doughnutCanvas.current, {
+    if (!apiData.length) return;
+    await new Chart(doughnutCanvas.current, {
       type: "doughnut",
       data: {
-        labels: data.map((item) => `${item.firstname} ${item.lastname}`),
+        labels: apiData.map((item) => `${item.name}`),
         datasets: [
           {
-            label: "Birth Year",
-            data: data.map((item) => item.birthYear),
+            label: "Email length",
+            data: apiData.map((item) => item.email.length),
           },
         ],
       },
     });
-    setDoughnut(chart);
-  }, []);
+  }, [apiData]);
 
   return (
     <Styled>
